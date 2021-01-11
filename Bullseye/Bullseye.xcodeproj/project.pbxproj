@@ -14,6 +14,9 @@
 		9E74786325AB7B0800DF21CF /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E74786225AB7B0800DF21CF /* Game.swift */; };
 		9E74786C25ABACBD00DF21CF /* BullseyeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E74786B25ABACBD00DF21CF /* BullseyeTests.swift */; };
 		9E74787625ACB9F300DF21CF /* TextViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E74787525ACB9F300DF21CF /* TextViews.swift */; };
+		9E74787A25ACD90600DF21CF /* Shapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E74787925ACD90600DF21CF /* Shapes.swift */; };
+		9E74787E25ACDC5E00DF21CF /* RoundViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E74787D25ACDC5E00DF21CF /* RoundViews.swift */; };
+		9E74788325ACE18F00DF21CF /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E74788225ACE18F00DF21CF /* BackgroundView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,9 @@
 		9E74786B25ABACBD00DF21CF /* BullseyeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BullseyeTests.swift; sourceTree = "<group>"; };
 		9E74786D25ABACBD00DF21CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E74787525ACB9F300DF21CF /* TextViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViews.swift; sourceTree = "<group>"; };
+		9E74787925ACD90600DF21CF /* Shapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shapes.swift; sourceTree = "<group>"; };
+		9E74787D25ACDC5E00DF21CF /* RoundViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundViews.swift; sourceTree = "<group>"; };
+		9E74788225ACE18F00DF21CF /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +114,9 @@
 			children = (
 				9E74784E25AA2A6300DF21CF /* ContentView.swift */,
 				9E74787525ACB9F300DF21CF /* TextViews.swift */,
+				9E74787925ACD90600DF21CF /* Shapes.swift */,
+				9E74787D25ACDC5E00DF21CF /* RoundViews.swift */,
+				9E74788225ACE18F00DF21CF /* BackgroundView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -232,8 +241,11 @@
 			files = (
 				9E74784F25AA2A6300DF21CF /* ContentView.swift in Sources */,
 				9E74787625ACB9F300DF21CF /* TextViews.swift in Sources */,
+				9E74787A25ACD90600DF21CF /* Shapes.swift in Sources */,
+				9E74788325ACE18F00DF21CF /* BackgroundView.swift in Sources */,
 				9E74786325AB7B0800DF21CF /* Game.swift in Sources */,
 				9E74784D25AA2A6300DF21CF /* BullseyeApp.swift in Sources */,
+				9E74787E25ACDC5E00DF21CF /* RoundViews.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
