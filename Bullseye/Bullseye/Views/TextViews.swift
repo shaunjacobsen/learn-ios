@@ -23,8 +23,34 @@ struct InstructionText: View {
   }
 }
 
+struct BigNumberText: View {
+  var text: String
+  
+  var body: some View {
+    Text(text)
+      .foregroundColor(Color("TextColour"))
+      .kerning(-1.0)
+      .font(.largeTitle)
+      .fontWeight(.black)
+      .bold()
+  }
+}
+
+struct SliderLabelText: View {
+  var text: String
+  
+  var body: some View {
+    Text(text)
+      .foregroundColor(Color("TextColour"))
+      .bold()
+  }
+}
+
 struct TextViews_Previews: PreviewProvider {
   static var previews: some View {
-    InstructionText(text: "🎯\nPut the bullseye as close as you can to")
+    VStack {
+      InstructionText(text: "Instructions")
+      BigNumberText(text: "99")
+    }
   }
 }
