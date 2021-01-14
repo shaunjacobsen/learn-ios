@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct Shapes: View {
+  
+  @State private var wideShapes = true
+  
   var body: some View {
     VStack {
       Circle()

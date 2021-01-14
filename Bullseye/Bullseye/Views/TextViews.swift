@@ -59,12 +59,43 @@ struct LabelText: View {
   }
 }
 
+struct InformativeText: View {
+  var text: String
+  
+  var body: some View {
+    Text(text)
+      .font(.caption)
+      .foregroundColor(Color("TextColour"))
+      .bold()
+      .lineSpacing(10)
+      .multilineTextAlignment(.center)
+  }
+}
+
+struct ButtonText: View {
+  var text: String
+  
+  var body: some View {
+    Text(text)
+      .foregroundColor(Color.white)
+      .font(.body)
+      .bold()
+      .padding()
+      .frame(maxWidth: .infinity)
+      .background(Color.accentColor)
+      .cornerRadius(12)
+  }
+}
+
 struct TextViews_Previews: PreviewProvider {
   static var previews: some View {
     VStack {
       InstructionText(text: "Instructions")
       BigNumberText(text: "99")
       LabelText(text: "Score")
+      InformativeText(text: "Some text here\n🎉🎉🎉")
+      ButtonText(text: "Start New Round")
+        .padding()
     }
   }
 }

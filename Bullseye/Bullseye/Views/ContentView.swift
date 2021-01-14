@@ -18,8 +18,18 @@ struct ContentView: View {
       BackgroundView(game: $game)
       VStack {
         InstructionsView(game: $game)
+          .padding(.bottom, alertVisible ? 0 : 100)
+        if alertVisible {
+          PointsView(game: $game, sliderValue: $sliderValue, alertVisible: $alertVisible)
+            .transition(.scale)
+        } else {
+          HitMeButtonView(alertVisible: $alertVisible, sliderValue: $sliderValue, game: $game)
+            .transition(.scale)
+        }
+      }
+      if !alertVisible {
         SliderView(sliderValue: $sliderValue)
-        HitMeButtonView(alertVisible: $alertVisible, sliderValue: $sliderValue, game: $game)
+          .transition(.scale)
       }
     }
   }
@@ -60,8 +70,9 @@ struct HitMeButtonView: View {
   
   var body: some View {
     Button(action: {
-      alertVisible = true
-      
+      withAnimation {
+        alertVisible = true
+      }
     }) {
       Text("Hit me".uppercased())
         .bold()
@@ -77,16 +88,9 @@ struct HitMeButtonView: View {
     .foregroundColor(Color.white)
     .cornerRadius(12)
     .overlay(
-      RoundedRectangle(cornerRadius: 12)
-        .strokeBorder(Color.white, lineWidth: 2)
+      RoundedRectangle(cornerRadius: Constants.General.roundRectCornerRadius)
+        .strokeBorder(Color.white, lineWidth: Constants.General.strokeWidth)
     )
-    .alert(isPresented: $alertVisible, content: {
-      let roundedValue = Int(sliderValue.rounded())
-      let points = game.points(sliderValue: roundedValue)
-      return Alert(title: Text("Score!"), message: Text("You got: \(roundedValue) and earned \(points) points"), dismissButton: .default(Text(("Done"))) {
-        game.startNewRound(points: points)
-      })
-    })
   }
 }
 
