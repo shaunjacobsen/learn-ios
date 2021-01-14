@@ -87,6 +87,42 @@ struct ButtonText: View {
   }
 }
 
+struct ScoreText: View {
+  var score: Int
+  
+  var body: some View {
+    Text(String(score))
+      .kerning(-0.2)
+      .fontWeight(.semibold)
+      .font(.title3)
+      .foregroundColor(Color("TextColour"))
+  }
+}
+
+struct DateText: View {
+  var date: Date
+  
+  var body: some View {
+    Text(date, style: .time)
+      .kerning(-0.2)
+      .fontWeight(.semibold)
+      .font(.title3)
+      .foregroundColor(Color("TextColour"))
+  }
+}
+
+struct LargeBoldText: View {
+  let text: String
+  
+  var body: some View {
+    Text(text.uppercased())
+      .kerning(2.0)
+      .foregroundColor(Color("TextColour"))
+      .font(.title)
+      .fontWeight(.black)
+  }
+}
+
 struct TextViews_Previews: PreviewProvider {
   static var previews: some View {
     VStack {
@@ -96,6 +132,9 @@ struct TextViews_Previews: PreviewProvider {
       InformativeText(text: "Some text here\n🎉🎉🎉")
       ButtonText(text: "Start New Round")
         .padding()
+      ScoreText(score: 99)
+      DateText(date: Date())
+      LargeBoldText(text: "Large")
     }
   }
 }

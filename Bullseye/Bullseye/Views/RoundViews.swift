@@ -24,6 +24,23 @@ struct RoundedSymbolStrokedView: View {
   }
 }
 
+struct RoundedTextView: View {
+  
+  var text: String
+  
+  var body: some View {
+    Text(text)
+      .font(.title)
+      .foregroundColor(Color("TextColour"))
+      .frame(width: Constants.General.roundRectViewHeight, height: Constants.General.roundRectViewHeight)
+      .overlay(
+        Circle()
+          .strokeBorder(Color("LeaderboardRowColour"), lineWidth:  Constants.General.strokeWidth)
+      )
+    
+  }
+}
+
 struct RoundedSymbolFilledView: View {
   
   var symbol: String
@@ -60,6 +77,7 @@ struct RoundRectTextView: View {
 struct PreviewView: View {
   var body: some View {
     VStack {
+      RoundedTextView(text: "12")
       RoundedSymbolStrokedView(symbol: "arrow.counterclockwise")
       RoundedSymbolFilledView(symbol: "list.dash")
       RoundRectTextView(text: "99")
