@@ -77,7 +77,7 @@ struct HeaderView: View {
           LargeBoldText(text: "Leaderboard")
         }
       }
-      .padding(.top)
+      
       HStack {
         Spacer()
         Button(action: {
@@ -87,6 +87,7 @@ struct HeaderView: View {
             .padding(.trailing)
         }
       }
+      .padding(.top)
     }
   }
 }
